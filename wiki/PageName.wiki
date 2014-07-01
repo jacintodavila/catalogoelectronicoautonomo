@@ -1,0 +1,13 @@
+#summary One-sentence summary of this page.
+
+= Introduction =
+
+Bienvenidos a catálogo electrónico autónomo. La licencia de este software es la 
+
+
+[http://opensource.org/licenses/AGPL-3.0 *GNU AFFERO GENERAL PUBLIC LICENSE, Version 3 (AGPL-3.0)*]
+
+
+
+
+= Detalles =
