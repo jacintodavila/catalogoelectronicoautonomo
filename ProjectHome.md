@@ -1,0 +1,1 @@
+The Catalogo Electrónico Autonomo is software to manage an electronic collection of documents. It starts as a Prolog based GUI to swish-e, the document indexing system, but it aims to be a information retrieval tool for autonomous (users') collections of pdfs from journals and periodicals.
