@@ -3,7 +3,7 @@
 % * Página web principal del Catalogo Electronico Autonomo partir de un   *
 % * código con HTML termerizado en Prolog. Proyecto final tesis.          *
 % * Este programa es Software Libre. Desarrollado por                     *
-% * Julio Jaimes y Jacinto Davila, basándose la app CEA dise#ada por      *
+% * Julio Jaimes y Jacinto Davila, basándose la app CEA diseñado por      *
 % * por Jacinto Davila y Yaritza Vargas                                   *
 % *************************************************************************
 
@@ -139,28 +139,24 @@ barra_nav --> html(nav(
 
 	div([class='container-fluid'],
 		[
-			div([class='navbar-header'],[
-				a([class='navbar-brand'],'CEA *************************')
-				]),
+
 
 			ul([class='nav navbar-nav', class='col-md-4'],[
 
 				li(form([style='align: left; margin: 0px 0px 0px 100px;',action='/f/leeme.html', method='POST'],
 						input([name='submit', type='submit', class='btn btn-md btn-success btn-block', value='Manual']))),
-				li(form([style='align: left; margin: 0px 0px 0px 100px;',action='/guardar', method='POST'],
-						input([name='submit', type='submit', class='btn btn-md btn-success btn-block', value='Guardar']))),
+				li(form([style='align: left; margin: 0px 0px 0px 100px;',action='/f/contactos.html', method='POST'],
+						input([name='submit', type='submit', class='btn btn-md btn-success btn-block', value='Contactos']))),
 				li(form([style='align: left; margin: 0px 0px 0px 100px;',action='/f/index.html', method='POST'],
 						input([name='submit', type='submit', class='btn btn-md btn-success btn-block', value='Indices']))),
-				li(form([style='align: left; margin: 0px 0px 0px 100px;',action='/abrir', method='POST'],
-						input([name='submit', type='submit', class='btn btn-md btn-success btn-block', value='Abrir']))),
-		        li(form([style='align: left; margin: 0px 0px 0px 100px;',action='/f/leeme.html'],
+				li(form([style='align: left; margin: 0px 0px 0px 100px;',action='https:www.github.com/', method='POST'],
+						input([name='submit', type='submit', class='btn btn-md btn-success btn-block', value='Repositorio']))),
+		        li(form([style='align: left; margin: 0px 0px 0px 100px;',action='https:www.github.com/'],
 
 		        	input([name= 'submit', type='submit', class='btn btn-md btn-success btn-block', value='Manual'])))
-				]),
-
-		div([class='navbar-header'],[
-				a([class='navbar-brand',href='ula.com'],'CEA *************************')
 				])
+
+
 
 		])])).
 
