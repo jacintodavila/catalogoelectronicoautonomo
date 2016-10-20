@@ -22,7 +22,7 @@ Paso 2:
 	luego haga la indexacion de los documentos.
 /*****************************************************************************************************************/
 Paso 3:
-	Luego entre en el directorio del proyecto y habra la terminal desde alli.
+	Luego entre en el directorio del proyecto y abra la terminal desde alli.
 /*****************************************************************************************************************/
 Paso 4:
 	ejecute el siguiente comando:
@@ -185,6 +185,16 @@ Paso 6:
 
 	swish-e -w Aqui_Va_La_Pakabra_a_Buscar
 
+
+/********************************************************************************************************************/
+/************************                                            ************************************************/
+/************************       Observacion sobre los documentos     ************************************************/
+/************************                                            ************************************************/
+/********************************************************************************************************************/
+
+Tener en cuenta que en el directorio indices y sus subdirectorios del proyecto usted puede agregar los documentos
+ que desee tener en su sistema y luego hacer la indexacion de los mismos mediante swish-e ir a
+Pasos Para indexar los archivos y continuar.
 /********************************************************************************************************************/
 /************************                                            ************************************************/
 /************************       Fin del manual de instalacion        ************************************************/
