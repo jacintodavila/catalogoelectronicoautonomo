@@ -192,9 +192,28 @@ Paso 6:
 /************************                                            ************************************************/
 /********************************************************************************************************************/
 
+
+Al descargar el proyecto usted debe copiar la informacion que hay en los directorios indice1 e indice2
+ al directorio indices
+
+
 Tener en cuenta que en el directorio indices y sus subdirectorios del proyecto usted puede agregar los documentos
  que desee tener en su sistema y luego hacer la indexacion de los mismos mediante swish-e ir a
 Pasos Para indexar los archivos y continuar.
+
+/********************************************************************************************************************/
+/************************                                            ************************************************/
+/************************       Pasos para generar el archivo sitema.xml     ****************************************/
+/************************                                            ************************************************/
+/********************************************************************************************************************/
+
+1) abrir la terminal 
+2) swipl
+3) [pxml].
+4) carga_xml(A).
+5) genera_xml_site("sitemap.xml").
+
+
 /********************************************************************************************************************/
 /************************                                            ************************************************/
 /************************       Fin del manual de instalacion        ************************************************/

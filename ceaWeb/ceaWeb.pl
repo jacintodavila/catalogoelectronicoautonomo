@@ -101,13 +101,14 @@ page_content(_Request) -->
 head --> html(
 			header(
 				[div( class='img-responsive container row col-xs-12 col-sm-12 col-md-12 col-lg-12',
-					img([src='https://s32.postimg.org/rclj1hved/educerecabecera.jpg', class='img-responsive',
+					img([src='/f/images/educerecabecera.jpg', class='img-responsive',
 					% img([src='images/educerecabecera.jpg', class='img-responsive',
 					 style='float: center; margin: 0 auto;'])
 
 					),
 
 					h1([ align='center' ],'CEA: Catálogo Electrónico Autónomo'),
+					p([ align='center' ],'InMemoriAn: Ingeniería Linguística de la Memoria Cultural Andina: - Bienvenid@s.'),
  					p([ align= 'center'], script(' document.write(Date())') )
 
 
@@ -151,9 +152,9 @@ barra_nav --> html(nav(
 						input([name='submit', type='submit', class='btn btn-md btn-success btn-block', value='Indices']))),
 				li(form([style='align: left; margin: 0px 0px 0px 100px;',action='https:www.github.com/', method='POST'],
 						input([name='submit', type='submit', class='btn btn-md btn-success btn-block', value='Repositorio']))),
-		        li(form([style='align: left; margin: 0px 0px 0px 100px;',action='https:www.github.com/'],
+		        li(form([style='align: left; margin: 0px 0px 0px 100px;',action='/f/sitemap.xsl.xml'],
 
-		        	input([name= 'submit', type='submit', class='btn btn-md btn-success btn-block', value='Manual'])))
+		        	input([name= 'submit', type='submit', class='btn btn-md btn-success btn-block', value='sitemap'])))
 				])
 
 
@@ -176,22 +177,13 @@ busqueda --> html(div(form([style='align: left; margin: 0px 0px 0px 100px;',acti
 			p(div(class='col-xs-11 col-sm-11 col-md-11 col-lg-11', html(\['<hr></hr>']))),
 
 			p(div(class='form-group col-xs-11 col-sm-11 col-md-11 col-lg-11',
-
 			  input([name=entrada, class='form-control input-md',type=textarea, placeholder='Informacion a buscar'])
 			      )),
 
-			p(div([class='form-group col-xs-11 col-sm-11 col-md-11 col-lg-11',style='margin:0px;'],
-			  h4(class='venacti',b('Nombre del archivo de salida'))
-			 )),
-			p(div(class='form-group col-xs-11 col-sm-11 col-md-11 col-lg-11',
-
-			    input([name=salida, class='form-control input-md', type=textarea, placeholder=' ejemplo: Salida'])
-			      )
-			 ),
 
 
 			p(div(class='center',
-		  input([name=submit, type=submit, class='btn btn-md btn-success btn-block', value='Buscar'])))
+		    input([name=submit, type=submit, class='btn btn-md btn-success btn-block', value='Buscar'])))
 
 
 
@@ -210,19 +202,19 @@ landing_pad(Request) :-
 		reply_html_page(
 
 		    [title('Consulta')],
-		    [\page_content1([Ans,S2],Request)]).
+		    [\page_content1([Ans,E2],Request)]).
 
 % **********************************************************************
 % Procesa la informaicon introducida por el usuario.
 % **********************************************************************
 
-procesa(Data, Entrada, Salida) :-
+procesa(Data, Entrada, _Salida) :-
 	member(entrada=Pre, Data),
-	member(salida=Res, Data),
-	(Pre\='' -> read_term_from_atom(Pre, Entrada, []) ; true),
-	(Res\='' -> read_term_from_atom(Res, Salida, []) ; true).
+	%member(salida=Res, Data),
+	(Pre\='' -> read_term_from_atom(Pre, Entrada, []) ; true).
+	%(Res\='' -> read_term_from_atom(Res, Salida, []) ; true).
 
-page_content1([Ent,_S2],_Request) -->
+page_content1([Ent,E2],_Request) -->
 	html(
 	   [
 
@@ -238,7 +230,9 @@ page_content1([Ent,_S2],_Request) -->
 		form([style='align: left; margin: 0px 0px 0px 100px;',action='javascript:history.back();', method='POST'], [
 		    \['<br></br>'],
 			div([class='text-center'],[
-		 	 p([style='font-size: 20pt', title='Entrada'], b('Resultados')),
+		 	 p([style='font-size: 20pt', title='Entrada'], b('Resultados de la consulta:')),
+		 	  p([style='font-size: 20pt', title='Entrada'], E2),
+
 	  			table([ align(center),
 	                       border(1),
 	                       width('100%')
@@ -249,8 +243,6 @@ page_content1([Ent,_S2],_Request) -->
 	                          ])
 	                     | \web_rows(Ent)
 	                     ]),
-
-
 
 			\['<br></br>'],
 		    \['<br></br>'],
