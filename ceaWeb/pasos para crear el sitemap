@@ -1,0 +1,12 @@
+
+
+
+
+1) abrir la terminal 
+2) swipl
+3) [pxml].
+4) carga_xml(A).
+5) genera_xml_site("sitemap.xml").
+
+
+

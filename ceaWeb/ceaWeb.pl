@@ -90,7 +90,6 @@ page_content(_Request) -->
 	    \head,
 	    \enlaces
 
-
      ]).
 
 % **********************************************************************
@@ -102,7 +101,6 @@ head --> html(
 			header(
 				[div( class='img-responsive container row col-xs-12 col-sm-12 col-md-12 col-lg-12',
 					img([src='/f/images/educerecabecera.jpg', class='img-responsive',
-					% img([src='images/educerecabecera.jpg', class='img-responsive',
 					 style='float: center; margin: 0 auto;'])
 
 					),
@@ -141,7 +139,6 @@ barra_nav --> html(nav(
 	div([class='container-fluid'],
 		[
 
-
 			ul([class='nav navbar-nav', class='col-md-4'],[
 
 				li(form([style='align: left; margin: 0px 0px 0px 100px;',action='/f/leeme.html', method='POST'],
@@ -156,8 +153,6 @@ barra_nav --> html(nav(
 
 		        	input([name= 'submit', type='submit', class='btn btn-md btn-success btn-block', value='sitemap'])))
 				])
-
-
 
 		])])).
 
@@ -180,12 +175,8 @@ busqueda --> html(div(form([style='align: left; margin: 0px 0px 0px 100px;',acti
 			  input([name=entrada, class='form-control input-md',type=textarea, placeholder='Informacion a buscar'])
 			      )),
 
-
-
 			p(div(class='center',
 		    input([name=submit, type=submit, class='btn btn-md btn-success btn-block', value='Buscar'])))
-
-
 
 	      ])]))).
 
@@ -221,7 +212,6 @@ page_content1([Ent,E2],_Request) -->
 	    \html_requires(jquery),
 	    \html_requires(bootstrap_js),
 		\html_requires(css('css/bootstrap.css')),
-		%\html_requires(css('css/bootstrap.min.css')),
 		\html_requires(js('js/jquery.min.js')),
 		\html_requires(js('js/bootstrap.js')),
 	    \head,
