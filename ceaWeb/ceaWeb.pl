@@ -68,7 +68,7 @@ server(Port) :-
 say_hi(Request) :-
 
 	reply_html_page(
-	   [title('CEA: Catalogo Electronico Autonomo.')],
+	   [title('Catálogo Electrónico Autónomo ceaWeb.')],
 	    [\page_content(Request)]).
 
 % **********************************************************************
@@ -105,7 +105,7 @@ head --> html(
 
 					),
 
-					h1([ align='center' ],'CEA: Catálogo Electrónico Autónomo'),
+					h1([ align='center' ],'Catálogo Electrónico Autónomo ceaWeb.'),
 					p([ align='center' ],'InMemoriAn: Ingeniería Linguística de la Memoria Cultural Andina: - Bienvenid@s.'),
  					p([ align= 'center'], script(' document.write(Date())') )
 
@@ -271,7 +271,7 @@ header -->
 foot --> html(footer(
 	[
 
-		div([class='text-center'],'Catalogo Electrónico Atónomo © 2016.'),
+		div([class='text-center'],'Catalogo Electrónico Atónomo ceaWeb © 2016.'),
 		div([class='text-center'],'Diseñado por Julio Jaimes R. y Jacinto Davila.'),
 		p([ align= 'center'], script(' document.write(Date())') ),
 		(div([id='subir',class='text-right'],
