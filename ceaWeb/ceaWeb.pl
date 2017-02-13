@@ -462,20 +462,25 @@ call_unix_temp(Utl, Args, Output) :-
 	append([Utl|Args], [' > ', File], Lista),
 	concatena(Lista, Command),
          shell(Command, _Status),
-	new(F, file(File, utf8)),
-	send(F, open, read),
-	new(OS, string),
-	repeat,
-	(
-	get(F, read_line, Line)
-	-> send(OS, append, Line),
-	fail
-	;
-	!
-	),
-	pce_string_to_list(OS, Output),
+    open(File, read, Stream2),
+	read_stream_to_codes(Stream2,Output),
 
-	delete_file(File).
+	delete_file(File),
+	close(Stream2).
+	%new(F, file(File, utf8)),
+	%send(F, open, read),
+	%new(OS, string),
+	%repeat,
+	%(
+	%get(F, read_line, Line)
+	%-> send(OS, append, Line),
+	%fail
+	%;
+	%!
+	%),
+	%pce_string_to_list(OS, Output),
+
+	%delete_file(File).
 
 call_winOS(Command, Args, Output) :-
 	append([Command|Args], ['salidaswishe.txt'], Lista),
